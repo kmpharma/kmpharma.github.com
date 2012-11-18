@@ -1,0 +1,92 @@
+::-moz-selection {
+  background: #4cacdf;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: #4cacdf;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* Custom Style */
+body {
+  background-color: white;
+}
+footer {
+  padding: 30px 0;
+  border-top: 1px solid #E5E5E5;
+  background-color: whiteSmoke;
+}
+h1 {
+  font-family: 'ChevinLightRegular';
+  font-weight: 1000;
+  font-size: 55px;
+  line-height: 70px;
+  text-shadow: 1px 1px 1px #4C4C4C;
+}
+h2 {
+  font-family: 'MyriadProRegular';
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  font-style: italic;
+  margin: 50px 0 20px 0;
+}
+h3 {
+  color: #888;
+}
+.navbar .container {
+  width: 960px;
+}
+.navbar .brand {
+  color: white;
+  font-weight: 200;
+}
+#topBar {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#content {
+  margin-top: 50px;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: left;
+  width: 980px;
+  clear: both;
+  overflow: hidden;
+}
+#logo {
+  display: block;
+  margin: 0px auto;
+}
+#about h1 {
+  text-align: center;
+  margin: 100px auto 100px auto;
+  width: 800px;
+}
+#about .mission {
+  font-size: 16px;
+  line-height: 24px;
+}
+#about .hello {
+  margin: 60px auto 130px auto;
+}
+.section {
+  margin-bottom: 100px;
+}
+.hello {
+  width: 156px;
+  height: 24px;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 35px 35px;
+  display: block;
+  background-color: #e4a693;
+}
+/* Custom Style Ends */
