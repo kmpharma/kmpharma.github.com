@@ -1,0 +1,15 @@
+
+baseurl: https://improwised.com/
+languageCode: en-us
+title: KM Pharma
+theme: casper
+destination: "/Users/ashwin/goWorkspace/caddy_hugo/public"
+paginate: 10
+DisqusShortname: improwised
+Copyright: All rights reserved - 2016
+params:
+  description: "kmapharma"
+  cover: images/cover.png
+  author: Improwised Technologies
+  logo: images/improwised.png
+
