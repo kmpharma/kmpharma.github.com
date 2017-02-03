@@ -1,7 +1,7 @@
-# Website for KM Pharma solutiona.
+# Website for KM Pharma solution.
 
 ## Dependencies
-[Hugo](https://gohugo.io/) - a static site generator.
+ * [Hugo](https://gohugo.io/) - a static site generator.
 
 ## add Product.
 
