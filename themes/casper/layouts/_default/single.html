@@ -46,27 +46,23 @@
     </header>
 
     <section class="post-content">
-      {{ .Content }}
+      {{$a := .Slug }}
 
-       <tr>
-        <td> </td>
-        <td> </td>
-      <tr>
-
+      <!-- first table -->
       <table border="1">
-        {{ $url := "products.csv" }}
+        {{ $url := (print "data/" $a "/" $a "_details.csv") }}
         {{ $sep := "," }}
         {{ range $i, $r := getCSV $sep $url }}
-        <tr>
 
+        <tr>
           {{ if eq $i 0 }}
-            {{ range $r }}
-              <td>{{ . }}</td>
+            {{ range  $r }}
+             <b> <td>{{ . }}</td> </b>
             {{end}}
 
             {{else}}
               {{ range  $r }}
-                <td>{{ . }}</td>
+                <td>{{.}}</td>
               {{end}}
             {{end}}
 
@@ -74,11 +70,41 @@
         </tr>
       </table>
 
+      <!-- ============= -->
+
+      <!-- content of .md file  -->
+        {{ .Content }}
+      <!-- ==================   -->
+
+    <h4>Product details.</h4>
+
+    <!--second table -->
+      <table border="1">
+        {{ $url := (print "data/" $a "/" $a ".csv") }}
+        {{ $sep := "," }}
+        {{ range $i, $r := getCSV $sep $url }}
+
+        <tr>
+          {{ if eq $i 0 }}
+            {{ range  $r }}
+             <b> <td>{{ . }}</td> </b>
+            {{end}}
+
+            {{else}}
+              {{ range  $r }}
+                <td>{{.}}</td>
+              {{end}}
+            {{end}}
+
+          {{ end }}
+        </tr>
+      </table>
+
+    <!-- =========== -->
+
     </section>
 
-
   <footer class="post-footer">
-
 
     {{if .Site.Params.logo}}
     <figure class="author-image">
