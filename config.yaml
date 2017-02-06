@@ -9,7 +9,7 @@ DisqusShortname: improwised
 Copyright: All rights reserved - 2016
 params:
   description: "km pharma solutions"
-  cover: images/cover.png
+  # cover: images/cover.png
   author: Improwised Technologies
   # logo: images/improwised.png
 

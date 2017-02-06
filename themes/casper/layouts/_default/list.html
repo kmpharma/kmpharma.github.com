@@ -20,37 +20,45 @@
       {{ if .Site.Params.logo }}
         <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{.Site.BaseURL}}{{ .Site.Params.logo }}" alt="Home" /></a>
       {{end}}
+
       {{ if .Site.Menus.main }}
           <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
       {{else}}
       {{end}}
     </nav>
     <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">{{.Title}}</h1>
-            <h2 class="page-description">
-                {{if .Params.description}}
-                    {{.Params.description}}
-                {{end}}
-            </h2>
-        </div>
+      <div class="main-header-content inner">
+        <h1 class="page-title">{{.Title}}</h1>
+        <h2 class="page-description">
+            {{if .Params.description}}
+                {{.Params.description}}
+            {{end}}
+        </h2>
+      </div>
     </div>
 </header>
 
 <main class="content" role="main">
-    {{ $paginator := .Paginator }}
+    <!-- {{ $paginator := .Paginator }} -->
 
 	<div class="extra-pagination inner">
     {{ partial "pagination.html" $paginator }}
 	</div>
 
-	{{ range $index, $page := $paginator.Pages }}
-	   {{ partial "li.html" . }}
-	{{ end }}
+	   <!-- {{ partial "li.html" . }} -->
+    <div style="padding-left: 25%; padding-right: 25%;">
+      <table align="center">
+      {{ range $index, $page := $paginator.Pages }}
+        <tr>
+          <td>
+           <a href="{{ .RelPermalink }}">* {{ .Title }}</a>
+          </td>
+        </tr>
+      {{ end }}
+      </table>
+    </div>
 
 	{{ partial "pagination.html" $paginator }}
 </main>
-
-
 
 {{ partial "footer.html" . }}
