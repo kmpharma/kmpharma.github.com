@@ -76,29 +76,60 @@
         {{ .Content }}
       <!-- ==================   -->
 
-    <h4>Product details.</h4>
+    <h4><u>Product details.</u></h4>
 
     <!--second table -->
-      <table border="1">
+
         {{ $url := (print "data/" $a "/" $a ".csv") }}
         {{ $sep := "," }}
-        {{ range $i, $r := getCSV $sep $url }}
 
-        <tr>
-          {{ if eq $i 0 }}
-            {{ range  $r }}
-             <b> <td>{{ . }}</td> </b>
-            {{end}}
+      <!--   <table border="1px">
+          <tr>
+            {{ range $i, $r := getCSV $sep $url }}
+            {{ if eq $i 0 }}
+              <td style="width: 50%">
+                <table>
+                  {{ range $r }}
+                    <tr><td >{{ . }}</td></tr>
+                  {{end}}
+                </table>
+              </td>
+            {{ else }}
+              <td  style="width: 50%">
+                <table  style="width: 100%">
+                {{ range $r }}
+                  <tr>
+                    <td  style="width: 100%">{{ . }}</td>
+                  </tr>
+                {{ end }}
+                </table>
+              </td>
+            {{ end }}
+            {{ end }}
+          </tr>
+        </table> -->
 
-            {{else}}
-              {{ range  $r }}
-                <td>{{.}}</td>
-              {{end}}
-            {{end}}
+  {{ range $i, $r := getCSV $sep $url }}
+  <!-- <div style="display: flex;justify-content: center;flex-direction: row;"> -->
 
-          {{ end }}
-        </tr>
-      </table>
+    {{ if eq $i 0 }}
+    <div style="float: left; width: 32%;">
+      {{ range $r}}
+      <div >{{.}} </div>
+      {{end}}
+    {{else}}
+      <div>
+      {{ range $r}}
+       <div style="font-size: medium;">: {{.}}</div>
+       {{end}}
+    {{end}}
+  </div>
+  {{ end }}
+
+
+
+
+
 
     <!-- =========== -->
 
