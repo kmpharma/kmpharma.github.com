@@ -38,7 +38,12 @@ html {
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
 }
-body { margin: 0; }
+body {
+    margin: 0;
+    width: 60%;
+    margin-left: 20%;
+    position: relative;
+}
 a { background: transparent; }
 a:focus { outline: thin dotted; }
 a:active, a:hover { outline: 0; }
@@ -193,7 +198,7 @@ body {
     max-height: 100%;
     font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
-    font-size: 1.8rem;
+    /*font-size: 1.8rem;*/
     line-height: 1.75em;
     color: #3A4145;
     -webkit-font-feature-settings: 'kern' 1;
@@ -476,6 +481,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Centres vertically yo. (IE8+) */
 .vertical {
+    height: 180px;
     display: table-cell;
     vertical-align: middle;
 }
@@ -483,8 +489,9 @@ margin on the iframe, cause it breaks stuff. */
 /* Wraps the main content & footer */
 .site-wrapper {
     position: relative;
+    margin-top: -67px;
     z-index: 10;
-    min-height: 100%;
+    min-height: 80%;
     background: #fff;
     -webkit-transition: -webkit-transform 0.5s ease;
             transition: transform 0.5s ease;
@@ -1097,19 +1104,19 @@ body:not(.post-template) .post-title {
 /* Keep images centered, and allow images wider than the main
    text column to break out. */
 .post-content img {
-    display: block;
+   /* display: block;
     max-width: 126%;
     height: auto;
     padding: 0.6em 0;
-    /* Centers an image by (1) pushing its left edge to the
+     Centers an image by (1) pushing its left edge to the
        center of its container and (2) shifting the entire image
        in the opposite direction by half its own width.
-       Works for images that are larger than their containers. */
+       Works for images that are larger than their containers.
     position: relative;
     left: 50%;
     -webkit-transform: translateX(-50%); /* for Safari and iOS */
-    -ms-transform: translateX(-50%); /* for IE9 */
-    transform: translateX(-50%);
+    /*-ms-transform: translateX(-50%);  for IE9
+    transform: translateX(-50%);*/
 }
 
 /* The author credit area after the post */
@@ -1468,6 +1475,13 @@ body:not(.post-template) .post-title {
 /* ==========================================================================
    10. Media Queries - Smaller than 900px
    ========================================================================== */
+
+@media (max-width: 1900px) {
+    .navbar-form .form-control {
+        width: 35% !important;
+    }
+}
+
 
 @media only screen and (max-width: 900px) {
 

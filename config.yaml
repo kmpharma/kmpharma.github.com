@@ -3,9 +3,9 @@ baseurl: https://improwised.com/
 languageCode: en-us
 title: KM Pharma
 theme: casper
-destination: "/Users/ashwin/goWorkspace/caddy_hugo/public"
+# destination: "/Users/ashwin/workspace"
 paginate: 10
-DisqusShortname: improwised
+# DisqusShortname: improwised
 Copyright: All rights reserved - 2016
 params:
   description: "km pharma solutions"

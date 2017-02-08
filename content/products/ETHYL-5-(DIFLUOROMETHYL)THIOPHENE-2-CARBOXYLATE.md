@@ -1,11 +1,9 @@
 +++
-title = "ETHYL-5-(DIFLUOROMETHYL)THIOPHENE-2-CARBOXYLATE"
+title = "ethyl-5-(diFluoroMethyl)thiophene-2-carboxylate"
 date = "2015-01-12T19:20:04-07:00"
 noauthor = true
 share = false
 type = "pages"
-slug="ETHYL-5-DIFLUOROMETHYL_THIOPHENE-2-CARBOXYLATE"
+slug="ethyl-5-difluoromethyl-thiophene-2-carboxylate"
 +++
 
-<h4> Structure of Product : </h4>
-![this is image](/images/productImages/ETHYL-5-DIFLUOROMETHYL_THIOPHENE-2-CARBOXYLATE.png)

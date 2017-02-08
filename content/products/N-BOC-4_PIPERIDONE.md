@@ -1,11 +1,9 @@
 +++
-title = "N-BOC-4 PIPERIDONE"
+title = "N-boc-4 piperidone"
 date = "2015-01-12T19:20:04-07:00"
 noauthor = true
 share = false
 type = "pages"
-slug="N-BOC-4_PIPERIDONE"
+slug="n-boc-4-piperidone"
 +++
 
-<h4> Structure of Product : </h4>
-![this is image](/images/productImages/N-BOC-4_PIPERIDONE.png)

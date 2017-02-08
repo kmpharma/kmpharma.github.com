@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 
-{{if .Params.image}}
+<!-- {{if .Params.image}}
   {{if or (eq (substr .Params.image 0 7) "http://") (eq (substr .Params.image 0 8) "https://")}}
   <header class="main-header post-head" style="background-image: url({{.Params.image}})">
   {{ else }}
@@ -20,7 +20,7 @@
       <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
   {{end}}
   </nav>
-</header>
+</header> -->
 
 
 
@@ -49,7 +49,7 @@
       {{$a := .Slug }}
 
       <!-- first table -->
-      <table border="1">
+      <table class="table-striped" style="border-top: 2px solid; border-bottom: 2px solid;">
         {{ $url := (print "data/" $a "/" $a "_details.csv") }}
         {{ $sep := "," }}
         {{ range $i, $r := getCSV $sep $url }}
@@ -57,7 +57,7 @@
         <tr>
           {{ if eq $i 0 }}
             {{ range  $r }}
-             <b> <td>{{ . }}</td> </b>
+             <b> <th style="background-color: white">{{ . }}</th> </b>
             {{end}}
 
             {{else}}
@@ -76,7 +76,7 @@
         {{ .Content }}
       <!-- ==================   -->
 
-    <h4><u>Product details.</u></h4>
+    <h3>Product Details</h3>
 
     <!--second table -->
 
@@ -108,11 +108,10 @@
             {{ end }}
           </tr>
         </table> -->
-
   {{ range $i, $r := getCSV $sep $url }}
   <!-- <div style="display: flex;justify-content: center;flex-direction: row;"> -->
-
-    {{ if eq $i 0 }}
+   {{ if eq $i 0 }}
+    <div style="float: left; width: 32%;">Structure</div> <div><img src="/images/productImages/{{$a}}.png"></div>
     <div style="float: left; width: 32%;">
       {{ range $r}}
       <div >{{.}} </div>
@@ -120,7 +119,7 @@
     {{else}}
       <div>
       {{ range $r}}
-       <div style="font-size: medium;">: {{.}}</div>
+       <div > {{.}}</div>
        {{end}}
     {{end}}
   </div>
@@ -131,26 +130,12 @@
 
 
 
+
+
     <!-- =========== -->
 
-    </section>
 
-  <footer class="post-footer">
 
-    {{if .Site.Params.logo}}
-    <figure class="author-image">
-        <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{ $baseurl }}{{.Site.Params.logo}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
-    </figure>
-    {{end}}
-
-    {{ partial "author.html" . }}
-
-    {{ partial "share.html" . }}
-
-    {{ partial "disqus.html" . }}
-
-  </footer>
-</article>
 
 </main>
-{{ partial "footer.html" . }}
+<!-- {{ partial "footer.html" . }} -->

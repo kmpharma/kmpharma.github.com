@@ -36,24 +36,37 @@
     display: block;
 }
 
+.table-striped > tbody > tr:nth-child(2n+0) > td {
+    background-color: #f1f7ff;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td {
+    background-color: white;
+}
+
+
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-#results-child {
-    width: 400px;
-    margin-top: 5px;
-    padding: 8px 12px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 8px 8px 8px 8px;
-    font-size: 18px;
-    color: #111;
-    background-color: #F1F1F1;
-    position: absolute;
-    z-index: 50;
+.productImage {
+    display: block;
+    max-width: 126%;
+    height: auto;
+    padding: 0.6em 0;
+    position: relative;
+    left: 0%;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
+.searchText {
+    top:12px;
+    position: absolute;
+    right:0;
+
+    margin-right: 15px;
+}
