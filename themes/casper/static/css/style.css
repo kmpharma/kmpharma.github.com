@@ -64,11 +64,10 @@
 }
 
 .searchText {
-    top:12px;
+    top:8px;
     position: absolute;
     right:0;
-
-    margin-right: 15px;
+    margin-right: 8px;
 }
 
 .link {

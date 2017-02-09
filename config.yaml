@@ -1,14 +1,14 @@
 
 baseurl: https://improwised.com/
 languageCode: en-us
-title: KM Pharma
+title: K.M. Pharma
 theme: casper
 # destination: "/Users/ashwin/workspace"
 paginate: 10
 # DisqusShortname: improwised
 Copyright: All rights reserved - 2016
 params:
-  description: "km pharma solutions"
+  # description: "km pharma solutions"
   # cover: images/cover.png
   author: Improwised Technologies
   # logo: images/improwised.png

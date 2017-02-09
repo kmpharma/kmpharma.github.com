@@ -298,13 +298,13 @@ dl dd {
     margin-bottom: 1em
 }
 
-li {
+/*li {
     margin: 0.4em 0;
 }
 
 li li {
     margin: 0;
-}
+}*/
 
 hr {
     display: block;
@@ -1479,7 +1479,7 @@ body:not(.post-template) .post-title {
 
 @media (max-width: 1900px) {
     .navbar-form .form-control {
-        width: 35% !important;
+        /*width: 33% !important;*/
     }
 }
 
