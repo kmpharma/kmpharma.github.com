@@ -85,11 +85,11 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="/">KM Pharma</a>
       </div >
-      <div>
-        <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+      <div id=navbar>
+        <ul class="nav navbar-nav" >
+          <li class="myhref"><a href="/" >Home</a></li>
+          <li class="myhref"><a href="/products">Products</a></li>
+          <li class="myhref"><a href="/contact">Contact Us</a></li>
         </ul>
       </div>
       <div>
@@ -124,20 +124,17 @@
             <script type="text/javascript" src="/js/vendor/lunr.min.js"></script>
            <!--  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/0.7.2/lunr.min.js"></script>
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+
+            <script type="text/javascript">
+
+            </script>
+
             <script type="text/javascript">
             var lunrIndex,
                 $results,
                 pagesIndex;
 
-                // $(window).load( function(){
-                //   $(document).on("click",".navbar-nav li a" ,function() {
-                //     $('.navbar-nav li').removeClass("active");
-                //     $(this).parent().addClass("active");
-                //   });
-                //     $('.divHead').load("head.html");
-                //     $('.divBody').load("home.html");
-                //     $('.footerrow').load("foot.html");
-                // });
+
 
             window.onload = function(){
               a = window.location.href;

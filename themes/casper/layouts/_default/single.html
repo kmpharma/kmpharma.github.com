@@ -61,9 +61,14 @@
             {{end}}
 
             {{else}}
-              {{ range  $r }}
-                <td>{{.}}</td>
-              {{end}}
+              {{ range $index, $data := $r }}
+                {{if eq $index 0}}
+                  <td>{{$data}}</td>
+                {{else}}
+                  <td><a href="/contact" class="link">Enquire</a></td>
+                {{end}}
+                {{end}}
+
             {{end}}
 
           {{ end }}
