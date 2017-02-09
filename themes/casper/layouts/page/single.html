@@ -7,14 +7,23 @@
     <br>
     <form role="form" onsubmit="return ValidateForm()">
         <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">Name*</label>
             <input type="name" class="form-control" placeholder="Enter name" id="name">
             <span id="nameErr" style="color: red"></span>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Email Address</label>
+            <label for="Email">Email Address*</label>
             <input type="email" class="form-control" placeholder="Enter email" id="email">
             <span id="emailErr" style="color: red"></span>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject*</label>
+            <input type="subject" class="form-control" placeholder="Subject" id="subject">
+            <span id="subjectErrErr" style="color: red"></span>
+        </div>
+        <div class="form-group">
+            <label for="Message">Message</label>
+            <textarea class="form-control" rows="5" id="message"  placeholder="Message"></textarea>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
@@ -25,14 +34,21 @@
     function ValidateForm(){
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        document.getElementById("nameErr").innerHTML='';
+        document.getElementById("emailErr").innerHTML='';
+        document.getElementById("subjectErrErr").innerHTML='';
         if(!name){
-            document.getElementById("nameErr").innetHtml="*required";
+            document.getElementById("nameErr").innerHTML="*Required";
             return false;
         } else if(!email){
-            document.getElementById("emailErr").innetHtml="*required";
+            document.getElementById("emailErr").innerHTML="*Required";
+            return false;
+        } else if(!subject){
+            document.getElementById("subjectErrErr").innerHTML="*Required";
             return false;
         } else {
-        return true;
+            return true;
         }
     }
 </script>

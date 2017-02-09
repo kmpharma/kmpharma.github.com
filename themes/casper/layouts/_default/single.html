@@ -1,33 +1,7 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 
-<!-- {{if .Params.image}}
-  {{if or (eq (substr .Params.image 0 7) "http://") (eq (substr .Params.image 0 8) "https://")}}
-  <header class="main-header post-head" style="background-image: url({{.Params.image}})">
-  {{ else }}
-  <header class="main-header post-head" style="background-image: url({{ $baseurl }}{{.Params.image}})">
-  {{ end }}
-  <nav class="main-nav overlay clearfix">
-{{else}}
-<header class="main-header post-head no-cover">
-  <nav class="main-nav clearfix">
-{{end}}
-
-  {{ if .Site.Params.logo }}
-      <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{.Site.BaseURL}}{{ .Site.Params.logo }}" alt="Home" /></a>
-  {{end}}
-  {{ if .Site.Menus.main }}
-      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
-  {{end}}
-  </nav>
-</header> -->
-
-
-
 <main class="content" role="main">
-
-
-
 
   <article class="post {{ .Section }}">
 
@@ -114,21 +88,22 @@
           </tr>
         </table> -->
   {{ range $i, $r := getCSV $sep $url }}
-  <!-- <div style="display: flex;justify-content: center;flex-direction: row;"> -->
-   {{ if eq $i 0 }}
-    <div style="float: left; width: 32%;">Structure</div> <div><img src="/images/productImages/{{$a}}.png"></div>
+  <div id="container" >
+    {{ if eq $i 0 }}
+    <div style="float: left; width: 32%;">Structure</div> <div class="lineSpacing"><img src="/images/productImages/{{$a}}.png"></div>
     <div style="float: left; width: 32%;">
       {{ range $r}}
-      <div >{{.}} </div>
+      <div class="lineSpacing">{{.}} </div>
       {{end}}
     {{else}}
       <div>
       {{ range $r}}
-       <div > {{.}}</div>
+       <div class="lineSpacing"> {{.}}</div>
        {{end}}
     {{end}}
+    </div>
+    {{ end }}
   </div>
-  {{ end }}
 
 
 
