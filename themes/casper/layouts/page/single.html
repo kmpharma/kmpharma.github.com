@@ -5,20 +5,40 @@
 <div class="col-md-4" style="margin-top: 5%;">
     <h3>Contact Us</h3>
     <br>
-    <form role="form">
+    <form role="form" onsubmit="return ValidateForm()">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="name" class="form-control" placeholder="Enter name">
+            <input type="name" class="form-control" placeholder="Enter name" id="name">
+            <span id="nameErr" style="color: red"></span>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Email Address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <input type="email" class="form-control" placeholder="Enter email" id="email">
+            <span id="emailErr" style="color: red"></span>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
 </div>
 </main>
 
+<script type="text/javascript">
+    function ValidateForm(){
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        if(!name){
+            document.getElementById("nameErr").innetHtml="*required";
+            return false;
+        } else if(!email){
+            document.getElementById("emailErr").innetHtml="*required";
+            return false;
+        } else {
+        return true;
+        }
+    }
+</script>
+
 <!-- {{ partial "suggestions.html" . }} -->
 
 <!-- {{ partial "footer.html" . }} -->
+
+
