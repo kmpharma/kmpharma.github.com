@@ -133,7 +133,6 @@
           <!-- to highlight selected page on navbar -->
             <script type="text/javascript">
               $(".nav a").on("click", function(event){
-                console.log(event, $(this));
                  $(".nav").find(".active").removeClass("active");
                  $(this).parent().addClass("active");
               });
