@@ -1,54 +1,96 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 
-<main class="content" role="main">
-<div class="col-md-4" style="margin-top: 5%;">
-    <h3>Contact Us</h3>
-    <br>
-    <form role="form" onsubmit="return ValidateForm()" action="http://formspree.io/contact@kmpharma.in" method="POST">
-        <div class="form-group">
-            <label for="name">Name*</label>
-            <input type="name" name="Name" class="form-control" placeholder="Enter name" id="name">
-            <span id="nameErr" class="formFieldErr"></span>
-        </div>
-        <div class="form-group">
-            <label for="Email">Email Address*</label>
-            <input type="email" name="Email" class="form-control" placeholder="Enter email" id="email">
-            <span id="emailErr" class="formFieldErr"></span>
-        </div>
 
-        <div class="form-group">
-            <label for="Message">Message*</label>
-            <textarea class="form-control" rows="5" id="message" name="Message" placeholder="Message"></textarea>
-            <span id="messageErr" class="formFieldErr"></span>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-</div>
-</main>
+{{ $url := replace .Permalink (printf "%s" .Site.BaseURL) "" }}
 
-<script type="text/javascript">
-    function ValidateForm(){
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var message = document.getElementById("message").value;
-        document.getElementById("nameErr").innerHTML='';
-        document.getElementById("emailErr").innerHTML='';
-        document.getElementById("messageErr").innerHTML='';
-        if(!name){
-            document.getElementById("nameErr").innerHTML="*Required";
-            return false;
-        } else if(!email){
-            document.getElementById("emailErr").innerHTML="*Required";
-            return false;
-        } else if(!message){
-            document.getElementById("messageErr").innerHTML="*Required";
-            return false;
-        } else {
-            return true;
+{{ if eq $url "contact/"}}
+    <main class="content" role="main">
+    <div class="col-md-4" style="margin-top: 5%;">
+        <h3>Contact Us</h3>
+
+            <b> Regd. Office:</b>
+            <br>
+            <p class="contact"> Office No. 9, Shiv Complex,</p>
+            <p class="contact">40-feet Road, </p>
+            <p class="contact"> Behind Dharam Nagar,</p>
+            <p class="contact"> Mavdi Plot,</p>
+            <p class="contact"> Rajkot - 360004</p>
+            <p class="contact">Gujarat, India.</p>
+            <br>
+
+            <p class="contact" > <a style="color:#0088cc" href="mailto:contact@kmpharma.in?subject=Website Enquiry">contact@kmpharma.in</a></p>
+            <p class="contact"> M: +91 96873 12121 / +91 99135 54030</p>
+
+        <br>
+        <form role="form" onsubmit="return ValidateForm()" action="http://formspree.io/contact@kmpharma.in" method="POST">
+            <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="name" name="Name" class="form-control" placeholder="Enter name" id="name">
+                <span id="nameErr" class="formFieldErr"></span>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email Address*</label>
+                <input type="email" name="Email" class="form-control" placeholder="Enter email" id="email">
+                <span id="emailErr" class="formFieldErr"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Message">Message*</label>
+                <textarea class="form-control" rows="5" id="message" name="Message" placeholder="Message"></textarea>
+                <span id="messageErr" class="formFieldErr"></span>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    </main>
+
+    <script type="text/javascript">
+        function ValidateForm(){
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            document.getElementById("nameErr").innerHTML='';
+            document.getElementById("emailErr").innerHTML='';
+            document.getElementById("messageErr").innerHTML='';
+            if(!name){
+                document.getElementById("nameErr").innerHTML="*Required";
+                return false;
+            } else if(!email){
+                document.getElementById("emailErr").innerHTML="*Required";
+                return false;
+            } else if(!message){
+                document.getElementById("messageErr").innerHTML="*Required";
+                return false;
+            } else {
+                return true;
+            }
         }
-    }
-</script>
+    </script>
+
+{{else}}
+    <div id="custom" class="section" style="text-align: justify;">
+    <br>
+    <br>
+        <h2>Custom Synthesis</h2>
+        <p><strong>K.M. Pharma Solution</strong> has a team of super excellence professionals with B.sc., M.sc. and Ph.D. degree in chemistry, as well as excellent laboratory and pilot technicians. With a wide variety of synthesis and research experience, and having a good relationship with some famous Indian universities, research institutions and laboratories, <strong>K.M. Pharma Solution</strong> offers custom synthesis for any kinds of APIs &amp; Intermediates, Fine &amp; Specialty Chemicals, Chemical Building Blocks &amp; Novel Organic Compounds.</p>
+        <p>We offer competitive prices and shortest lead time for custom synthesis. Custom made compounds are usually delivered within three to four weeks if it is a two- or three-step synthesis and in one kilogram quantity or less. We will keep purchaser informed of the progress of project.</p>
+        <p>Our main reaction capabilities include:</p>
+        <ul>
+          <li>Alkylation</li>
+          <li>Catalytic Hydrogenations</li>
+          <li>Friedel-Crafts Reaction</li>
+          <li>Grignard Reactions</li>
+          <li>Halogenations (Fluorination,Bromination and Chlorination)</li>
+          <li>Quinoline and iso-quinoline Analogs Synthesis</li>
+          <li>Nitration</li>
+          <li>Oxidation and Reduction</li>
+          <li>Palladium Catalyzed Chemistry</li>
+          <li>Sulfonation</li>
+          <li>Wittig Reactions</li>
+        </ul>
+      </div>
+{{end}}
 
 <!-- {{ partial "suggestions.html" . }} -->
 
