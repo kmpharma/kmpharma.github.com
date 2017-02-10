@@ -23,7 +23,7 @@
       {{$a := .Slug }}
 
       <!-- first table -->
-      <table class="table-striped" style="border-top: 2px solid; border-bottom: 2px solid;">
+      <table class="table-striped" class="tableStyle">
         {{ $url := (print "data/" $a "/" $a "_details.csv") }}
         {{ $sep := "," }}
         {{ range $i, $r := getCSV $sep $url }}
@@ -31,7 +31,7 @@
         <tr>
           {{ if eq $i 0 }}
             {{ range  $r }}
-             <b> <th style="background-color: white">{{ . }}</th> </b>
+             <b> <th class="tableBackcolor">{{ . }}</th> </b>
             {{end}}
 
             {{else}}
@@ -90,8 +90,8 @@
   {{ range $i, $r := getCSV $sep $url }}
   <div id="container" >
     {{ if eq $i 0 }}
-    <div style="float: left; width: 32%;">Structure</div> <div class="lineSpacing"><img src="/images/productImages/{{$a}}.png"></div>
-    <div style="float: left; width: 32%;">
+    <div class="productInfo">Structure</div> <div class="lineSpacing"><img src="/images/productImages/{{$a}}.png"></div>
+    <div class="productInfo">
       {{ range $r}}
       <div class="lineSpacing">{{.}} </div>
       {{end}}
@@ -104,12 +104,6 @@
     </div>
     {{ end }}
   </div>
-
-
-
-
-
-
 
 
     <!-- =========== -->
