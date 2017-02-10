@@ -1,0 +1,10 @@
+0.0.0.0:5000
+
+  root KMPharmaSolution/public
+  git http://192.168.1.5:10080/ashvin/KMPharmaSolution.git . {
+    hook /_webhook ashvin
+    then hugo server
+  }
+
+
+
