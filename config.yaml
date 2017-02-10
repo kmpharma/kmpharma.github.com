@@ -2,6 +2,7 @@
 baseurl: http://www.kmpharma.in/
 languageCode: en-us
 title: K.M. Pharma Solution
+description: K.M. Pharma Solution is high-tech company in chemical and pharmaceutical field.
 theme: casper
 # destination: "/Users/ashwin/workspace"
 paginate: 10
@@ -12,4 +13,4 @@ params:
   # cover: images/cover.png
   author: KM Pharma Solution
   # logo: images/improwised.png
-
+  customFooterPartial: 'custom_footer.html'
