@@ -5,7 +5,7 @@
 {{ $url := replace .Permalink (printf "%s" .Site.BaseURL) "" }}
 
 {{ if eq $url "contact/"}}
-    <main class="content" role="main">
+    <main class="content" role="main" style="margin-top: -75px;">
     <div class="col-md-4" style="margin-top: 5%;">
         <h3>Contact Us</h3>
 
@@ -68,7 +68,7 @@
     </script>
 
 {{else}}
-    <div id="custom" class="section" style="text-align: justify;">
+    <div id="custom" class="section" style="text-align: justify; margin-top: -75px;">
     <br>
     <br>
         <h2>Custom Synthesis</h2>
